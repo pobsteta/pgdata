@@ -1,15 +1,15 @@
 Docker notes
 ============
 
-Enregistrer une image
----------------------
+Enregistrer un conteneur en une image
+-------------------------------------
 
-docker commit <ID> pgdata_bef
+docker commit <ID_conteneur> pgdata_tag
 
-Taguer une image
-----------------
+Taguer ensuite l'image
+----------------------
 
-docker tag <ID> pobsteta/pgdata:bef
+docker tag <ID_image> pobsteta/pgdata:tag
 
 Utiliser le dépôt docker
 ------------------------
@@ -18,13 +18,13 @@ Se logguer au serveur docker et pousser l'image sur le serveur.
 
 ```sh
 sudo docker login
-sudo docker push pobsteta/pgdata:latest
+sudo docker push pobsteta/pgdata:tag
 ```
 
 Recevoir l'image du serveur docker :
 
 ```sh
-sudo docker pull pobsteta/pgdata
+sudo docker pull pobsteta/pgdata:tag
 ```
 
 Utiliser Trusted Build
