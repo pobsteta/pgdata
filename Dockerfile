@@ -8,7 +8,7 @@
 FROM pobsteta/docker-base
 MAINTAINER Pascal Obstetar <pascal.obstetar@bioecoforests.com>
 
-VOLUME ["/var/lib/postgresql/data", "/var/lib/tryton"]
+VOLUME ["/var/lib/postgresql/data", "/var/lib/tryton", "var/log/tryton"]
 
 CMD ["true"]
 
